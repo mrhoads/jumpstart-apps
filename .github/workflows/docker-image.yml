@@ -2,8 +2,11 @@ name: Docker Image CI
 
 on:
   push:
+    branches:
+      - 'action-build-ui'
     paths:
       - 'agora/main_ui/src'
+  workflow_dispatch:
 
 jobs:
 
