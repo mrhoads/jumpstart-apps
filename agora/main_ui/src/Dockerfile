@@ -18,5 +18,6 @@ COPY ./env-config.sh /docker-entrypoint.d/env-config.sh
 RUN sed -i 's/\r$//' /docker-entrypoint.d/env-config.sh
 RUN chmod +x /docker-entrypoint.d/env-config.sh
 
+# Comment to trigger build
 EXPOSE 80
 CMD ["/bin/sh", "-c", "/docker-entrypoint.d/env-config.sh && nginx -g 'daemon off;'"]
