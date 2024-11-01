@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build ./agora/main_ui/src --file ./agora/main_ui/src/Dockerfile --tag main-ui:$(date +%s)
